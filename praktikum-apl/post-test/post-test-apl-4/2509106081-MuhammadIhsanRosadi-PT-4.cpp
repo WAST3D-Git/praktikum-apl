@@ -39,17 +39,17 @@ void tampilkanHeader(string judul) {
     }
 }
 
-bool cariProyek(Project *projects, int index, int jumlahProject, string kataKunci, int *foundIndex) {
+bool cariProyek(Project *projects, int index, int jumlahProject, string kataKunci, int *indexDitemukan) {
     if (index >= jumlahProject) {
         return false;
     }
     
     if ((projects + index) -> judul.find(kataKunci) != string::npos) {
-        *foundIndex = index;
+        *indexDitemukan = index;
         return true;
     }
     
-    return cariProyek(projects, index + 1, jumlahProject, kataKunci, foundIndex);
+    return cariProyek(projects, index + 1, jumlahProject, kataKunci, indexDitemukan);
 }
 
 void cariProyek(Project *projects, int jumlahProject) {
