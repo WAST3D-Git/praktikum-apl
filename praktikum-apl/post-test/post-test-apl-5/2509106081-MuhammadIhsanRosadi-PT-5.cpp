@@ -241,7 +241,6 @@ void tampilkanProyekDenganSorting(Project *projects, int jumlahProject, Project 
         return;
     }
     
-    // Salin data ke array sementara
     Project tempProjects[MAX_PROJECT];
     for(int i = 0; i < jumlahProject; i++) {
         tempProjects[i] = projects[i];
@@ -416,8 +415,7 @@ void updateProyek(Project *projects, int jumlahProject) {
     }
 
     for(int i = 0; i < jumlahProject; i++){
-        cout << i+1 << ". ID: " << (projects + i)->id << " - " 
-             << (projects + i) -> judul << " - " 
+        cout << i+1 << ". " << (projects + i) -> judul << " - " 
              << (projects + i) -> detail.status << endl;
     }
 
@@ -483,8 +481,7 @@ int hapusProyek(Project *projects, int jumlahProject) {
     }
 
     for(int i = 0; i < jumlahProject; i++){
-        cout << i+1 << ". ID: " << (projects + i)->id << " - " 
-             << (projects + i) -> judul << " - " 
+        cout << i+1 << ". " << (projects + i) -> judul << " - " 
              << (projects + i) -> detail.klien << endl;
     }
 
