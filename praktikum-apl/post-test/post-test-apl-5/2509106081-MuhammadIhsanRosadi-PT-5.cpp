@@ -168,7 +168,6 @@ void cariProyek(Project *projects, int jumlahProject) {
             cout << "Deadline  : " << projects[indexDitemukan].detail.deadline << endl;
             cout << "Klien     : " << projects[indexDitemukan].detail.klien << endl;
             cout << "Status    : " << projects[indexDitemukan].detail.status << endl;
-
             cout << "Komentar  : ";
             if(projects[indexDitemukan].jumlahKomentar == 0){
                 cout << "-";
